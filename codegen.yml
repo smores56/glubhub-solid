@@ -1,0 +1,13 @@
+schema: http://0.0.0.0:8000/cgi-bin/grease
+documents: "src/**/*.graphql"
+generates:
+  ./src/gql.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typed-document-node
+    config:
+      scalars:
+        GqlDate: string
+        GqlDateTime: string
+        UniformColor: string
